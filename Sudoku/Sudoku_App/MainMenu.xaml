@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sudoku_App.MainMenu"
+             BackgroundColor="#121428"
+             >
+
+    <Grid RowDefinitions="Auto,*,Auto" Padding="20">
+        
+        <!-- Title -->
+        <Label Grid.Row="0"
+                Text="SUDOKU"
+                FontSize="48"
+                FontAttributes="Bold"
+                TextColor="White"
+                HorizontalOptions="Center"
+                Margin="0,20,0,20"/>
+
+        <!-- Menu Options -->
+        <VerticalStackLayout Grid.Row="1" 
+                            Spacing="20" 
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            WidthRequest="300">
+            
+            <!-- Continue Game Button (if saved game exists) -->
+            <Button x:Name="ContinueButton"
+                    Text="Continue Game"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    BackgroundColor="#4A90E2"
+                    CornerRadius="10"
+                    HeightRequest="60"
+                    Clicked="OnContinueClicked"
+                    IsVisible="False"/>
+            
+            <!-- New Game Label -->
+            <Label Text="NEW GAME"
+                   FontSize="14"
+                   TextColor="White"
+                   Opacity="0.7"
+                   HorizontalOptions="Center"
+                   Margin="0,20,0,0"/>
+            
+            <!-- Easy Button -->
+            <Button Text="Easy"
+                    FontSize="18"
+                    TextColor="White"
+                    BackgroundColor="#4A90E2"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    Clicked="OnEasyClicked"/>
+            
+            <!-- Medium Button -->
+            <Button Text="Medium"
+                    FontSize="18"
+                    TextColor="White"
+                    BackgroundColor="#4A90E2"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    Clicked="OnMediumClicked"/>
+            
+            <!-- Hard Button -->
+            <Button Text="Hard"
+                    FontSize="18"
+                    TextColor="White"
+                    BackgroundColor="#4A90E2"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    Clicked="OnHardClicked"/>
+            
+            <!-- Expert Button -->
+            <Button Text="Expert"
+                    FontSize="18"
+                    TextColor="White"
+                    BackgroundColor="#4A90E2"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    Clicked="OnExpertClicked"/>
+            
+            <!-- Master Button -->
+            <Button Text="Master"
+                    FontSize="18"
+                    TextColor="White"
+                    BackgroundColor="#4A90E2"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    Clicked="OnMasterClicked"/>
+            
+            <!-- Extreme Button -->
+            <Button Text="Extreme"
+                    FontSize="18"
+                    TextColor="White"
+                    BackgroundColor="#4A90E2"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    Clicked="OnExtremeClicked"/>
+            
+        </VerticalStackLayout>
+
+        <!-- Footer -->
+        <Label Grid.Row="2"
+               Text="Choose your difficulty level"
+               FontSize="14"
+               TextColor="White"
+               Opacity="0.6"
+               HorizontalOptions="Center"
+               Margin="0,0,0,40"/>
+
+    </Grid>
+
+</ContentPage>
